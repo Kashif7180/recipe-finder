@@ -1,12 +1,52 @@
 # React + Vite
+# 🍲 Recipe Finder
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A **responsive React web application** that lets users search for meals and view detailed recipes using the **[TheMealDB API](https://www.themealdb.com/api.php)**. Built with React hooks, dynamic UI, and dark mode support.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🔥 Features
 
-## Expanding the ESLint configuration
+- **Search Recipes:** Search meals by name or ingredient.  
+- **Recipe Cards:** Displays meal image, name, category, and area.  
+- **Recipe Modal:** View full details including ingredients, measurements, instructions, and YouTube tutorial.  
+- **API Integration:** Fetches recipes in real-time from TheMealDB.  
+- **Loading & Error Handling:** Spinner and error messages when needed.  
+- **Dark Mode Toggle:** Switch between light and dark themes.  
+- **Responsive Design:** Works on desktop, tablet, and mobile screens.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🏗️ Project Structure
+
+recipe-finder/
+│
+├─ src/
+│  ├─ components/
+│  │  ├─ SearchBar.jsx
+│  │  ├─ Recipelist.jsx
+│  │  ├─ RecipeCard.jsx
+│  │  └─ RecipeModal.jsx
+│  ├─ App.jsx
+│  └─ main.jsx
+├─ public/
+├─ package.json
+└─ README.md
+
+---
+
+## 💻 Tech Stack
+
+- **Frontend:** React.js, JavaScript, HTML, CSS  
+- **API:** [TheMealDB API](https://www.themealdb.com/api.php)  
+- **State Management:** React `useState` & `useEffect`  
+- **Styling:** Responsive CSS with light/dark themes  
+
+---
+
+## ⚡ How to Run Locally
+
+1. **Clone the repo**
+```bash
+git clone https://github.com/Kashif7180/recipe-finder.git
+cd recipe-finder
