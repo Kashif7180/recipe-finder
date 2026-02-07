@@ -188,19 +188,6 @@ vercel --prod
 
 ---
 
-## 📸 Screenshots
-
-### Light Mode
-![Recipe Finder Light Mode](https://via.placeholder.com/800x400?text=Recipe+Finder+Light+Mode)
-
-### Dark Mode
-![Recipe Finder Dark Mode](https://via.placeholder.com/800x400?text=Recipe+Finder+Dark+Mode)
-
-### Cook Mode
-![Cook Mode](https://via.placeholder.com/800x400?text=Cook+Mode)
-
----
-
 ## 🤝 Contributing
 
 Contributions are welcome! Feel free to:
