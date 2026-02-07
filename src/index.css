@@ -646,10 +646,11 @@ body,
 }
 
 .modal-content {
-    background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(30px);
-    -webkit-backdrop-filter: blur(30px);
-    border: 1px solid rgba(255, 255, 255, 0.25);
+    background: rgba(255, 255, 255, 0.98);
+    /* More solid for light mode visibility */
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 30px;
     width: 90%;
     max-width: 750px;
@@ -659,7 +660,8 @@ body,
     position: relative;
     box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
     animation: modalSlideIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    color: white;
+    color: #1a1a1a;
+    /* Dark text for light mode */
 }
 
 @keyframes modalSlideIn {
@@ -1119,12 +1121,13 @@ body,
 }
 
 .shopping-list-content {
-    background: rgba(255, 255, 255, 0.95);
+    background: #ffffff;
+    color: #1a1a1a;
     padding: 30px;
     border-radius: 30px;
-    width: 90%;
+    width: 95%;
     max-width: 500px;
-    max-height: 80vh;
+    max-height: 85vh;
     overflow-y: auto;
     position: relative;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
@@ -1651,11 +1654,14 @@ body,
     background: rgba(0, 0, 0, 0.2);
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
+
 /* Fix Timer Colors */
 .timer-widget {
     color: #333 !important;
 }
-.timer-header h3, .timer-display h1 {
+
+.timer-header h3,
+.timer-display h1 {
     color: #333 !important;
 }
 
@@ -1664,17 +1670,21 @@ body,
     background: #222 !important;
     color: white !important;
 }
-.app.dark .timer-header h3, 
+
+.app.dark .timer-header h3,
 .app.dark .timer-display h1 {
     color: white !important;
 }
+
 .app.dark .timer-header {
     background: #333 !important;
 }
+
 .app.dark .control-btn {
     background: #444 !important;
     color: white !important;
 }
+
 .app.dark .time-input-wrapper button {
     background: #444 !important;
     border-color: #555 !important;
@@ -1687,10 +1697,16 @@ body,
     gap: 15px !important;
     flex-wrap: wrap !important;
 }
-.modal-speak-btn, .cook-mode-trigger-btn, .modal-share-btn, .modal-print-btn, .modal-favorite-btn {
+
+.modal-speak-btn,
+.cook-mode-trigger-btn,
+.modal-share-btn,
+.modal-print-btn,
+.modal-favorite-btn {
     padding: 12px 24px !important;
     font-size: 15px !important;
-    white-space: nowrap; /* Prevent wrapping */
+    white-space: nowrap;
+    /* Prevent wrapping */
 }
 
 /* ===== ABOUT MODAL ===== */
@@ -1710,7 +1726,7 @@ body,
 .about-header-section h2 {
     font-size: 32px;
     margin: 0;
-    text-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 .app-version {
@@ -1725,7 +1741,8 @@ body,
     padding: 30px;
 }
 
-.about-app h3, .about-dev h3 {
+.about-app h3,
+.about-dev h3 {
     font-size: 20px;
     color: #333;
     border-bottom: 2px solid #eee;
@@ -1762,7 +1779,7 @@ body,
     border: 1px solid #eee;
     padding: 15px;
     border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
 }
 
 .dev-info h4 {
@@ -1770,6 +1787,7 @@ body,
     font-size: 18px;
     color: #333;
 }
+
 .dev-info p {
     margin: 0;
     font-size: 14px;
@@ -1787,24 +1805,36 @@ body,
     background: #1a1a1a;
     color: white;
 }
+
 .app.dark .about-header-section {
     background: linear-gradient(135deg, #0f0c29 0%, #302b63 100%);
 }
-.app.dark .about-app h3, .app.dark .about-dev h3 {
+
+.app.dark .about-app h3,
+.app.dark .about-dev h3 {
     color: white;
-    border-bottom-color: rgba(255,255,255,0.1);
+    border-bottom-color: rgba(255, 255, 255, 0.1);
 }
+
 .app.dark .feature-item {
-    background: rgba(255,255,255,0.05);
-    border-color: rgba(255,255,255,0.1);
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.1);
     color: #ccc;
 }
+
 .app.dark .dev-card {
-    background: rgba(255,255,255,0.05);
-    border-color: rgba(255,255,255,0.1);
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.1);
 }
-.app.dark .dev-info h4 { color: white; }
-.app.dark .dev-info p, .app.dark .dev-desc { color: #aaa; }
+
+.app.dark .dev-info h4 {
+    color: white;
+}
+
+.app.dark .dev-info p,
+.app.dark .dev-desc {
+    color: #aaa;
+}
 
 
 /* Fix scrolling in About Modal */
@@ -1812,35 +1842,119 @@ body,
     display: flex !important;
     flex-direction: column !important;
     max-height: 85vh !important;
-    overflow: hidden !important; /* Keep outer container hidden, scroll inner */
+    overflow: hidden !important;
+    /* Keep outer container hidden, scroll inner */
 }
+
 .about-body {
     overflow-y: auto !important;
     flex: 1 !important;
-    padding-bottom: 40px !important; /* Add padding for bottom scroll */
+    padding-bottom: 40px !important;
+    /* Add padding for bottom scroll */
 }
 
 
 /* FORCE TEXT COLOR FIX FOR VISIBILITY */
 /* Light Mode - Make text dark */
-.modal-content, 
-.modal-content h2, 
-.modal-content h3, 
-.modal-content p, 
-.modal-content li, 
+.modal-content,
+.modal-content h2,
+.modal-content h3,
+.modal-content p,
+.modal-content li,
 .modal-content label,
+.modal-content td,
+.modal-content th,
 .instruction-step span {
     color: #1a1a1a !important;
 }
 
 /* Dark Mode - Make text white */
-.app.dark .modal-content, 
-.app.dark .modal-content h2, 
-.app.dark .modal-content h3, 
-.app.dark .modal-content p, 
-.app.dark .modal-content li, 
+.app.dark .modal-content,
+.app.dark .modal-content h2,
+.app.dark .modal-content h3,
+.app.dark .modal-content p,
+.app.dark .modal-content li,
 .app.dark .modal-content label,
+.app.dark .modal-content td,
+.app.dark .modal-content th,
 .app.dark .instruction-step span {
     color: #ffffff !important;
 }
 
+/* Ensure table rows have a visible background in light mode */
+.ingredients-table td {
+    background: rgba(0, 0, 0, 0.03) !important;
+    border-color: rgba(0, 0, 0, 0.1) !important;
+}
+
+.app.dark .ingredients-table td {
+    background: rgba(255, 255, 255, 0.05) !important;
+    border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Mobile Performance Optimization */
+@media (max-width: 768px) {
+
+    .header,
+    .modal-overlay,
+    .modal-content,
+    .recipe-card,
+    .shopping-list-overlay {
+        backdrop-filter: none !important;
+        -webkit-backdrop-filter: none !important;
+    }
+
+    .header {
+        padding: 15px 20px;
+        background: rgba(255, 255, 255, 0.9);
+    }
+
+    .app.dark .header {
+        background: rgba(20, 20, 20, 0.95);
+    }
+
+    .recipe-card {
+        background: rgba(255, 255, 255, 0.1);
+    }
+
+    .modal-content,
+    .shopping-list-content {
+        padding: 20px;
+        width: 95%;
+    }
+
+    .header h1 {
+        font-size: 1.8rem;
+    }
+
+    .header-controls {
+        gap: 8px;
+    }
+
+    .favorites-btn,
+    .dark-toggle {
+        padding: 10px 15px;
+        font-size: 13px;
+    }
+}
+
+/* Fix visibility for history/shopping items in light mode */
+.shopping-item,
+.history-item {
+    color: #1a1a1a;
+}
+
+.app.dark .shopping-item,
+.app.dark .history-item {
+    color: #ffffff;
+}
+
+.empty-list {
+    color: #666;
+    text-align: center;
+    padding: 20px;
+}
+
+.app.dark .empty-list {
+    color: #aaa;
+}
